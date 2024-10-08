@@ -1,0 +1,356 @@
+  html {
+    overflow-y:hidden;
+    overflow-x: hidden;
+  }
+  
+  :root{
+    --hauteur-menu: 60px;
+  }
+  
+  body {
+    height: 100vh;
+    background-image: radial-gradient(rgb(18, 8, 109), rgb(0, 0, 0));
+    background-size: cover;
+  }
+
+  audio {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 70%;
+    display: flex;
+    margin: auto;
+  }
+
+
+  .end-title {
+    color: white;
+    text-align: center;
+    transform: translateY(100%);
+    animation: end-title 60s 10s ease-out forwards;
+    opacity: 0%;
+  }
+
+  .progres {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 90%;
+    display: flex;
+    margin: auto;
+  }
+
+  .mf {
+    color: white;
+    font-size: 100%;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px transparent;
+    pointer-events: none;
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20%;
+    width: 50%;
+    text-align: center;
+    transform: translateY(100%);
+    animation: slide-op 5s 3s ease-out forwards;
+    opacity: 0%;
+  }
+
+
+  .title-fin {
+    opacity: 0%;
+    animation: opacite 1s 6s infinite linear;
+  }
+
+  .max {
+    width: 20%; 
+  }
+
+  .square {
+    position:absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: solid 2px white;
+    width: 90%;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text-meh {
+    color: white;
+    border: solid 1px transparent;
+    width: 90%;
+    height: 800px;
+    margin: auto;
+    font-size: 2.5rem;
+  }
+
+  .text {
+    color: white;
+    border: solid 1px transparent;
+    width: 90%;
+    height: 800px;
+    justify-content: center;
+    text-align: start;
+    margin-left: 7px;
+  }
+
+  nav {
+    width: 100%;
+    font-size: 18px;
+    top: 0;
+  }
+
+  nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+    height: var(--hauteur-menu);
+  }
+   
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav > ul > li {
+    background-color: transparent;
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+
+  nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .menu-deroulant > a:after{
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+  }
+
+  .sous-menu {
+    position: relative;
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: rgb(90, 90, 90);
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+    z-index: 2;
+  }
+  
+  .sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+
+  nav > ul > li:hover > a{
+    color: #2169EC;
+  }
+
+  .sous-menu > li:hover {
+    background-color: rgba(33, 105, 236, 0.3);
+  }
+  
+  .sous-menu > li:hover > a {
+    color: white;
+  }
+
+  .menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+  }
+
+  .menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+  }
+
+  .title {
+    color: white;
+    font-size: 650%;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px transparent;
+    pointer-events: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px rgb(230, 18, 124),
+    0 0 77px rgb(230, 18, 124),
+    0 0 100px rgb(230, 18, 124);
+    animation: lumiere 1s infinite linear;
+  }
+
+  .container {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  .btn {
+    justify-content: center;
+    align-items: center;
+    border: solid 1px transparent;
+    color: white;
+    border: solid 3px;
+    border-radius: 25px;
+    width: auto;
+    font-size: 200%;
+    text-align: center;
+    transition: 0.7s ease 0s;
+    cursor: pointer;
+    text-decoration: none;
+    transform: translateY(100%);
+    animation: slide 1s 1s ease-out forwards;
+    opacity: 0%;
+  }
+
+  .btn:hover {
+    color:white;
+    text-shadow: 0 0 20px white;
+    left: 0;
+    right: 0;
+    bottom: 8%;
+    transition-duration:0.7s;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px rgb(230, 18, 124),
+    0 0 77px rgb(230, 18, 124);
+  }
+
+  
+  @keyframes slide {
+    100% {
+      opacity: 100%;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slide-op {
+    100% {
+      opacity: 50%;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes end-title {
+    100% {
+      opacity: 50%;
+      transform: translateY(-90%);
+    }
+    99% {
+      opacity: 100%;
+      transform: translateY(-90%);
+    }
+   0% {
+      opacity: 100%;
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes lumiere {
+    0%{
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 42px rgb(230, 18, 124),
+        0 0 77px rgb(230, 18, 124),
+        0 0 100px rgb(230, 18, 124);
+    }
+   50%{
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 32px rgb(230, 18, 124),
+        0 0 87px rgb(230, 18, 124),
+        0 0 120px rgb(230, 18, 124);
+    }
+}
+
+@keyframes rotationFleche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes apparitionSousMenu {
+  0% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    border-top: 3px solid #2169EC;
+  }
+  30% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+  100% {
+    max-height: 50em;
+    border-top: 3px solid #2169EC;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+}
+
+@keyframes opacite {
+  0% {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 50%;
+  }
+  20% {
+    opacity: 70%;
+  }
+  30% {
+    opacity: 80%;
+  }
+  40% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 90%;
+  }
+  100% {
+   opacity: 60%;
+  }
+}
